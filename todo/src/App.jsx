@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './component/Header'
-import Footer from './component/Footer'
-import InfoComp from './component/InfoComp'
-import { ways, differences } from './component/info';
-
-function App() {
-
+import { ThemeProvider } from '@mui/material/styles';
+import DarkTheme from "./components/DarkTheme/DarkTheme";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import ToDos from "./components/ToDos/ToDos";
+const App = () => {
   return (
-    <>
-    <Header />
-    <Footer />
-    <InfoComp info={{ ways, differences }}/>
-    </>
-  )
-}
+    <ThemeProvider theme={DarkTheme}>
+      <Header />
+      <ToDos />
+      <Footer />
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
