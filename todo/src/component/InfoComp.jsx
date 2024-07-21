@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function InfoComp({ info }) {
     console.log(info);
     const firstWay = info.ways[0];
